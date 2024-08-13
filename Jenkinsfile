@@ -11,6 +11,7 @@ pipeline{
 		}
 		stage("run backend"){
 			steps{
+				sh 'gradle init'
 				echo 'executing gradle...'
 				withGradle(){
 					sh './gradlew -v'
